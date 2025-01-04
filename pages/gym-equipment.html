@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../css/pages/gym-equipment.css">
     <link rel="stylesheet" href="../css/components/navbar.css">
     <link rel="stylesheet" href="../css/components/footer.css">
+    <!-- Include Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,7 +71,7 @@
                 <div class="equipment-title test2">
                     <h4>Speed Bag</h4>
                 </div>
-                <p>Improves agility and hand-eye coordination, Training Time Reduction 50%.</p>
+                <p>Improves agility, Training Time Reduction 50%.</p>
             </div>
         </div>
 
@@ -80,21 +82,21 @@
                 <div class="equipment-title test2">
                     <h4>Knee Bag</h4>
                 </div>
-                <p>Designed for practicing knee strikes, enhancing power and technique.</p>
+                <p>Practicing knee strikes, enhancing power and technique.</p>
             </div>
             <div class="equipment-item">
                 <img src="../images/Free_Standing_Dummy-3.webp" alt="Free Standing Dummy" class="equipment-image"> <!-- Placeholder for image -->
                 <div class="equipment-title test2">
                     <h4>Standing Dummy</h4>
                 </div>
-                <p>Ideal for practicing clinchwork and various striking techniques.</p>
+                <p>Practicing clinchwork and various striking techniques.</p>
             </div>
             <div class="equipment-item">
                 <img src="../images/Punching_Bag-4.webp" alt="Punching Bag" class="equipment-image"> <!-- Placeholder for image -->
                 <div class="equipment-title test2">
                     <h4>Punching Bag</h4>
                 </div>
-                <p>Perfect for developing punching power and technique.</p>
+                <p>Developing punching power and technique.</p>
             </div>
             <div class="equipment-item">
                 <img src="../images/Kick_Bag-3.webp" alt="Kick Bag" class="equipment-image"> <!-- Placeholder for image -->
@@ -119,14 +121,14 @@
                 <div class="equipment-title test2">
                     <h4>Boxing Ring</h4>
                 </div>
-                <p>Provides a space to train various defensive skills, including clinchwork and strike defense.</p>
+                <p>Train various defensive skills, including clinchwork and strike defense.</p>
             </div>
             <div class="equipment-item">
                 <img src="../images/Panel_Cage_D2-1.webp" alt="Homemade MMA Ring" class="equipment-image"> <!-- Placeholder for image -->
                 <div class="equipment-title test2">
                     <h4>MMA Cage</h4>
                 </div>
-                <p>Offers a versatile environment for comprehensive training, accommodating multiple aspects of both offensive and defensive techniques.</p>
+                <p>Train various defensive skills, including clinchwork and strike defense.</p>
             </div>
         </div>
 
@@ -263,6 +265,47 @@
                 <div class="trainer-stat" style="width: 80px;">${trainer.strength}</div>
             `;
             trainersBody.appendChild(trainerRow);
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $('.navbar-toggler').click(function() {
+                $('.collapse').slideToggle(300); // Slide toggle effect
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function updateNavbarText() {
+                const links = document.querySelectorAll('.navbar-nav .nav-link');
+                console.log(links); // Log the links to see how many are selected
+    
+                if (window.innerWidth < 1050) {
+                    if (links.length > 4) { // Ensure there are enough links
+                        links[1].textContent = "G. Started"; // Getting Started
+                        links[2].textContent = "Guides"; // Strategies & Guides
+                        links[3].textContent = "Gym"; // Gym Equipment
+                        links[4].textContent = "Community"; // Community Resources
+                    }
+                } else {
+                    if (links.length > 4) { // Reset to original if there are enough links
+                        links[1].textContent = "Getting Started"; // Reset to original
+                        links[2].textContent = "Strategies & Guides"; // Reset to original
+                        links[3].textContent = "Gyms & Equipment"; // Reset to original
+                        links[4].textContent = "Community Resources"; // Reset to original
+                    }
+                }
+            }
+    
+            // Initial call
+            updateNavbarText();
+    
+            // Add event listener for window resize
+            window.addEventListener('resize', updateNavbarText);
         });
     </script>
 </body>

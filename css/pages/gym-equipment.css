@@ -183,42 +183,65 @@ h2 {
     background-color: #2a2a2a; /* Dark background for header */
     color: #ffffff; /* White text */
     padding: 10px; /* Padding for header */
-    justify-content: center; /* Center header items */
+    justify-content: space-between; /* Space items evenly */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    height: 80px; /* Fixed height for uniformity */
 }
 
+/* Header Item Styles */
 .header-item {
     display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack image and text */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
-    font-size: 0.8em; /* Adjust font size for compactness */
+    flex: 1; /* Allow items to grow equally */
+    min-width: 80px; /* Minimum width for header items */
+}
+
+/* Image Styles */
+.header-item img {
+    max-width: 100%; /* Allow images to scale down */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Body Styles */
 .table-body {
     display: flex;
     flex-direction: column; /* Column layout for body */
-    align-items: center; /* Center items horizontally */
 }
 
+/* Trainer Item Styles */
 .trainer-item, .coach-item {
     display: flex; /* Flexbox for trainer items */
     background-color: #2a2a2a; /* Dark background for items */
     padding: 10px; /* Padding for items */
     margin: 5px 0; /* Margin between items */
     border-radius: 5px; /* Rounded corners for items */
-    justify-content: center; /* Center items horizontally */
+    justify-content: space-between; /* Space items evenly */
 }
 
-.trainer-name, .coach-name {
-    flex: 0 0 auto; /* Fixed width for name */
-    text-align: center; /* Center align text */
-    border: 1px solid #444; /* Border for cells */
-}
-
+/* Stat Item Styles */
 .trainer-stat, .coach-stat {
-    flex: 0 0 auto; /* Fixed width for stats */
+    flex: 1; /* Allow stats to grow equally */
     text-align: center; /* Center align text */
     border: 1px solid #444; /* Border for cells */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .table-header {
+        flex-direction: column; /* Stack header items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .header-item {
+        margin-bottom: 5px; /* Space between header items */
+    }
+
+    .trainer-item, .coach-item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to fill the container */
+    }
 }
 
 /* Animation on Scroll */
@@ -290,4 +313,23 @@ h2 {
 
 .scrollable-table::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+.image-container {
+    width: 60px; /* Set a fixed width for the container */
+    height: 60px; /* Set a fixed height for the container */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+.image-container img {
+    max-width: 100%; /* Allow images to scale down */
+    max-height: 100%; /* Allow images to scale down */
+    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Maintain aspect ratio */
+}
+
+p {
+    color: white;
 }

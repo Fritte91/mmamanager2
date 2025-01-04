@@ -15,28 +15,7 @@ body {
     color: #e0e0e0; /* Light gray text for better readability */
     background: url("../images/background17.jpg");
     background-size: 70%;
-    
-}
-
-/* Popular Tools Section */
-#popular-tools {
-    padding: 40px 20px; /* Add padding for spacing */
-    text-align: center; /* Center align text */
-    background-color: #121212; /* Dark background for the section */
-    background-color: rgb(0 0 0 / 0.5);
-
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Deeper shadow for depth */
-}
-
-#popular-tools h2 {
-    font-family: "Bebas Neue", serif;
-  font-weight: 400;
-  font-size: 45px;
-  font-style: normal;
-  letter-spacing: 4px;
-  
-  
+     /* Add padding to the top of the body to prevent content from hiding behind the navbar */
 }
 
 .card {
@@ -129,8 +108,8 @@ button:hover {
 /* Blog Post Section */
 #blog-posts {
     padding: 40px 20px;
-    background-color: #1b1b1b; /* Dark background for the blog section */
-    background-color: rgb(0 0 0 / 0.5);
+    background-color: #131212; /* Dark background for the blog section */
+    background-color: rgb(0 0 0 / 0.7);
 
     border-radius: 10px;
     margin: 20px 0;
@@ -182,55 +161,62 @@ button:hover {
     background-color: #ff1a1a; /* Darker button on hover */
 }
 
-/* Event Item Styles */
-.event-item {
-    position: relative; /* Positioning context for the images */
-    width: 100%; /* Full width */
-    height: 200px; /* Set a fixed height for the card */
-    overflow: hidden; /* Hide overflow */
-    border-radius: 10px; /* Optional: rounded corners */
-}
-
-/* Container for images */
-.images-container {
-    display: flex; /* Align images in a row */
-    flex-direction: column; /* Stack images vertically */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-}
-
-/* Individual image wrapper */
-.image-wrapper {
-    flex: 1; /* Share space equally */
-    overflow: hidden; /* Hide overflow */
-    position: relative; /* Positioning context for the image */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
-    z-index: 1; /* Ensure it stays above the overlay */
-}
-
-/* Event Image Styles */
-.event-image {
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    object-fit: cover; /* Cover the entire wrapper */
-    object-position: top; /* Align to the top for horizontal cropping */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
-}
-
-/* Hover Effect */
-.image-wrapper:hover .event-image {
-    transform: scale(1.1); /* Scale the image on hover */
-    box-shadow: 0 0 15px rgba(255, 204, 0, 0.8); /* Glow effect */
-}
-
-/* Navbar Styles */
-#navbar {
-    position: fixed; /* Fix the navbar at the top */
-  top: 0; /* Align to the top */
-   width: 100%; /* Full width */
-   z-index: 1000; /* Ensure it stays above other content */
-}
 .blog-post-img {
     width: 600px;
     height: 300px;
+}
+
+
+
+/* Popular Tools Section Styles */
+.popular-tools-section {
+    text-align: center; /* Center the header */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+.popular-tools-header {
+    font-size: 24px; /* Header font size */
+    font-weight: bold; /* Bold header */
+    color: #f50c0c; /* Header color */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.popular-tools {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(4, 1fr); /* Three equal columns */
+    gap: 20px; /* Space between buttons */
+}
+
+.tool-button {
+    background: linear-gradient(180deg, #028ecf, #0805d8); /* Gradient background */
+    border: 2px solid #f80303; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding for buttons */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Bold text */
+    color: #dac6c6; /* Text color */
+    text-align: center; /* Center text */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for effects */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.tool-button:hover {
+    transform: scale(1.05); /* Slight grow effect on hover */
+    box-shadow: 0 4px 20px rgba(7, 4, 219, 0.5); /* Glow effect */
+}
+
+.tool-button:focus {
+    outline: none; /* Remove focus outline */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #ffcc00; /* Bright yellow for blog heading */
+    background: -webkit-linear-gradient(orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: black;
 }

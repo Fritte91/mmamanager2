@@ -1,21 +1,35 @@
-<nav>
-    <div class="navbar-container">
-        
-        
-        <ul id="navbar" class="navbar">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/getting-started.html">Getting Started</a></li>
-            <li>
-                <a href="#">Strategies & Guides</a>
-                <ul class="dropdown">
-                    <li><a href="../pages/talents.html">Talents</a></li>
-                    <li><a href="../pages/disciplines.html">Disciplines</a></li>
-                    <li><a href="../pages/guides.html">Build Guide</a></li>
-                    <li><a href="../pages/build-fighter.html">Build Your Fighter</a></li>
-                </ul>
-            </li>
-            <li><a href="../pages/gym-equipment.html">Gyms & Equipment</a></li>
-            <li><a href="../pages/Community-resources.html">Community Resources</a></li>
-        </ul>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="../index.html">
+            <img src="../images/mmalogo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+        </a>
+
+        <!-- Toggle Button for Collapsing Navbar -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-between w-100">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../pages/getting-started.html">Getting Started</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="event.preventDefault();">
+                        Strategies & Guides
+                    </a>
+                    <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item text-light" href="../pages/talents.html">Talents</a></li>
+                        <li><a class="dropdown-item text-light" href="../pages/disciplines.html">Disciplines</a></li>
+                        <li><a class="dropdown-item text-light" href="../pages/guides.html">Build Guide</a></li>
+                        <li><a class="dropdown-item text-light" href="../pages/build-fighter.html">Build Your Fighter</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="../pages/gym-equipment.html">Gyms & Equipment</a></li>
+                <li class="nav-item"><a class="nav-link" href="../pages/community-resources.html">Community Resources</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
+

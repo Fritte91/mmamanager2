@@ -46,3 +46,14 @@
     width: 100%; /* Full width */
     z-index: 1000; /* Ensure it stays above other content */
 }
+
+.creator-logo {
+    text-align: center; /* Center the logo */
+    margin-top: 20px; /* Space above the logo */
+}
+
+.logo-image {
+    max-width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    width: 200px; /* Set a specific width */
+}

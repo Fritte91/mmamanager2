@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MMA Manager 2 Fan Page</title>
-    <link rel="stylesheet" href="./css/styles.css"> <!-- Link to your CSS file -->
+    
     <link rel="stylesheet" href="./css/components/navbar.css">
-    <link rel="stylesheet" href="./css/pages/calender.css">
+    
     <link rel="stylesheet" href="./css/components/footer.css">
+    <!-- Include Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bowlby+One+SC&family=Chango&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 
 <script src="https://kit.fontawesome.com/7a82b1fabe.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./css/styles.css"> <!-- Link to your CSS file -->
+<link rel="stylesheet" href="./css/pages/calender.css">
 </head>
 <body>
     <div class="nav-links" id="navbar">
@@ -23,16 +27,19 @@
         <h1>The Ultimate MMA Manager 2 Knowledge Hub</h1>
         <p>Welcome to the fan page where you can find all the latest updates, guides, and community resources for MMA Manager 2!</p>
     </header>
-
-    <section id="popular-tools">
-        <h2>Popular Tools and Features</h2>
-        <a href="./pages/talents.html" class="card">Disciplines & Talents</a>
-        <a href="./pages/build-fighter.html" class="card">Fighter Simulator</a>
-        <a href="./pages/guides.html" class="card">Guides</a>
-        <div class="carousel">Recent Updates/Featured Guides</div>
+    <section id="popular-tools" class="transparent-background">
+      <div class="popular-tools-section">
+        <h2 class="popular-tools-header">Popular Tools and Features</h2>
+        <div class="popular-tools">
+            <a href="./pages/disciplines.html" class="tool-button">Disciplines</a>
+            <a href="./pages/talents.html" class="tool-button">Talents</a>
+            <a href="./pages/build-fighter.html" class="tool-button">Fighter Simulator</a>
+            <a href="./pages/guides.html" class="tool-button">Guides</a>
+        </div>
+      </div>
     </section>
-
-    <section id="event-calendar">
+    <section id="popular-tools" class="transparent-background">
+    <div id="event-calendar">
         <h2>Event Calendar</h2>
         <div class="calendar">
             <div class="calendar-header">
@@ -40,20 +47,13 @@
                 <h3 id="week-title">Week 1</h3>
                 <button id="next-week" onclick="changeWeek(1)">&#9654;</button>
             </div>
-            <div class="calendar-body">
-                <div class="day">Monday</div>
-                <div class="day">Tuesday</div>
-                <div class="day">Wednesday</div>
-                <div class="day">Thursday</div>
-                <div class="day">Friday</div>
-                <div class="day">Saturday</div>
-                <div class="day">Sunday</div>
-            </div>
+            
             <div class="week-events" id="week-events">
-                <!-- Event items will be dynamically inserted here -->
+                <!-- Event items will be dynamically generated here -->
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Blog Post Section -->
     <section id="blog-posts">
@@ -63,62 +63,128 @@
             <h3><i class="fa-solid fa-play"></i>   December 30th Balance Adjustments</h3>
             <p><strong>Date:</strong> December 30, 2024</p>
             <p>Hello Managers,<br>A new balance update is now live! See the changes below.</p>
-            <h4>GENERIC :</h4>
-            <ul>
-                <li>Escpaing clinch is now slightly harder.</li>
-                <li>Standing punch moves score a little less points (for victory points).</li>
-                <li>High Kicks have slightly lower base values.</li>
-            </ul>
-            <h4> TALENTS :</h4>
-            <ul>
-                <li>Rage fist: Punch damage increased from 10% to 16%, Punch combo chance increased from 10% to 12%.</li>
-            </ul>
-            <h4> NEW EFFECT :</h4>
-            <p>In Addition,3 talents have their effects entirely changed :</p>
-            <ul>
-                <li>Mob Brawler: Increase Critical hit change by 8% in the clinch stance. After the fighter successfully lands a critical hit in the clinch stance, reduce the opponent’s chance to successfully escape clinch by 1%. Can be stacked up to 12 times.</li>
-                <li>Frenzied Beating : After the fighter lands a successful hit,increase damage by 10%. Can be stacked up to 5% times resets when the fighter takes damage.</li>
-                <li>Staggering Strikes: Successful critical hits decrease the opponent's initative by 4¤ for 5 seconds.</li>
-            </ul>
-            <p>Over the course of 2025, more of the least exciting talents wll get similar changes. Happy New Year, may it be filled with many medals and belts!</p>
-            <button>Read More</button>
+            
+            <div class="expandable-content" style="display: none;">
+                <h4>GENERIC :</h4>
+                <ul>
+                    <li>Escaping clinch is now slightly harder.</li>
+                    <li>Standing punch moves score a little less points (for victory points).</li>
+                    <li>High Kicks have slightly lower base values.</li>
+                </ul>
+                <h4>TALENTS :</h4>
+                <ul>
+                    <li>Rage fist: Punch damage increased from 10% to 16%, Punch combo chance increased from 10% to 12%.</li>
+                </ul>
+                <h4>NEW EFFECT :</h4>
+                <p>In Addition, 3 talents have their effects entirely changed :</p>
+                <ul>
+                    <li>Mob Brawler: Increase Critical hit chance by 8% in the clinch stance...</li>
+                    <li>Frenzied Beating: After the fighter lands a successful hit, increase damage by 10%...</li>
+                    <li>Staggering Strikes: Successful critical hits decrease the opponent's initiative by 4 for 5 seconds.</li>
+                </ul>
+                <p>Over the course of 2025, more of the least exciting talents will get similar changes. Happy New Year, may it be filled with many medals and belts!</p>
+            </div>
+            <button class="read-more">Read More</button>
         </article>
 
         <article class="post">
             <h3><i class="fa-solid fa-play"></i>   Season 30 Champions</h3>
-            <p><strong>Date:</strong> Decmeber 29, 2024</p>
+            <p><strong>Date:</strong> December 29, 2024</p>
             <p>We have new Champions for the 30th season, Congratulations to the new belt and title!</p>
-            <img class="blog-post-img" src="./images/season30champ.jpg">
-            <button>Read More</button>
+            
+            <div class="expandable-content" style="display: none;">
+                <img class="blog-post-img" src="./images/season30champ.jpg">
+            </div>
+            <button class="read-more">Read More</button>
         </article>
 
         <article class="post">
             <h3><i class="fa-solid fa-play"></i>   Update 1.18.4 - New Features and Bug Fixes</h3>
             <p><strong>Date:</strong> October 10, 2023</p>
             <p>We have introduced several new features and fixed various bugs to enhance your gaming experience. Check out the details below:</p>
-            <ul>
-                <li>New event: "Ultimate Fight Night"</li>
-                <li>Bug fixes for matchmaking issues</li>
-                <li>Adjustments to fighter stats for better balance</li>
-            </ul>
-            <button>Read More</button>
+            
+            <div class="expandable-content" style="display: none;">
+                <ul>
+                    <li>New event: "Ultimate Fight Night"</li>
+                    <li>Bug fixes for matchmaking issues</li>
+                    <li>Adjustments to fighter stats for better balance</li>
+                </ul>
+            </div>
+            <button class="read-more">Read More</button>
         </article>
 
         <article class="post">
             <h3><i class="fa-solid fa-play"></i>   Update 1.18.3 - Gameplay Adjustments</h3>
             <p><strong>Date:</strong> September 25, 2023</p>
             <p>In this update, we focused on gameplay adjustments to improve overall balance:</p>
-            <ul>
-                <li>Increased damage for certain fighters</li>
-                <li>Fixed issues with skill point allocation</li>
-            </ul>
-            <button>Read More</button>
+            
+            <div class="expandable-content" style="display: none;">
+                <ul>
+                    <li>Increased damage for certain fighters</li>
+                    <li>Fixed issues with skill point allocation</li>
+                </ul>
+            </div>
+            <button class="read-more">Read More</button>
         </article>
     </section>
 
     <!-- Placeholder for Footer -->
     <div id="footer"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./js/loading-components.js"></script>
-    <script src="./js/schedule.js"></script> <!-- Link to the consolidated schedule.js file -->
+    <script src="./js/schedule.js"></script>
+    <script>
+        document.querySelectorAll('.read-more').forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.previousElementSibling; // Get the expandable content
+                if (content.style.display === "none") {
+                    content.style.display = "block"; // Show content
+                    this.textContent = "Read Less"; // Change button text
+                } else {
+                    content.style.display = "none"; // Hide content
+                    this.textContent = "Read More"; // Change button text back
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.navbar-toggler').click(function() {
+                $('.collapse').slideToggle(300); // Slide toggle effect
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function updateNavbarText() {
+                const links = document.querySelectorAll('.navbar-nav .nav-link');
+                console.log(links); // Log the links to see how many are selected
+    
+                if (window.innerWidth < 1050) {
+                    if (links.length > 4) { // Ensure there are enough links
+                        links[1].textContent = "G. Started"; // Getting Started
+                        links[2].textContent = "Guides"; // Strategies & Guides
+                        links[3].textContent = "Gym"; // Gym Equipment
+                        links[4].textContent = "Community"; // Community Resources
+                    }
+                } else {
+                    if (links.length > 4) { // Reset to original if there are enough links
+                        links[1].textContent = "Getting Started"; // Reset to original
+                        links[2].textContent = "Strategies & Guides"; // Reset to original
+                        links[3].textContent = "Gyms & Equipment"; // Reset to original
+                        links[4].textContent = "Community Resources"; // Reset to original
+                    }
+                }
+            }
+    
+            // Initial call
+            updateNavbarText();
+    
+            // Add event listener for window resize
+            window.addEventListener('resize', updateNavbarText);
+        });
+    </script>
 </body>
 </html>

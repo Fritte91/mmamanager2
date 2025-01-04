@@ -1,24 +1,29 @@
 /* Calendar Styles */
-#event-calendar {
+/* #event-calendar {
     margin: 20px 0; /* Margin around the calendar section */
-    text-align: center; /* Center align text */
-}
+  /*  text-align: center; /* Center align text */
+/*}*/
 
 .calendar {
-    display: inline-block; /* Center the calendar */
-    border: 2px solid #ec0909; /* Border around the calendar */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin: 0 auto; /* Center the calendar */
+    padding: 10px; /* Reduced padding around the calendar */
+    border: 2px solid rgba(255, 255, 255, 0.8); /* Border around the calendar */
     border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Hide overflow */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
 }
 
 .calendar-header {
-    display: flex; /* Flexbox for header */
-    align-items: center; /* Center align items */
-    justify-content: center;
-    background-color: #1b1b1b;; /* Dark background for header */
-    color: #ffffff; /* White text */
-    padding: 10px; /* Padding for header */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the buttons and title */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px; /* Space below the header */
 }
+
 .calendar-header button {
     margin: 0 10px; /* Add some space around the buttons */
 }
@@ -39,16 +44,18 @@
 }
 
 .week-events {
-    display: grid; /* Grid layout for events */
-    grid-template-columns: repeat(7, 1fr); /* 7 columns for events */
-    background-color: #1c1c1c; /* Darker background for events */
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(7, 1fr); /* Seven equal columns */
+    gap: 5px; /* Reduced space between items */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Optional: set a max width for the grid */
 }
 
 .event {
-    padding: 10px; /* Padding for each event */
-    background-color: #2a2a2a; /* Darker background for events */
+    padding: 0; /* Padding for each event */
+    background-color: transparent; /* No background for events */
     color: #ffffff; /* White text */
-    border: 1px solid #ff4d4d; /* Border around events */
+    border: none; /* No border around events */
     border-radius: 5px; /* Rounded corners for events */
     margin: 2px; /* Margin between events */
     transition: background 0.3s; /* Smooth transition for hover */
@@ -56,4 +63,80 @@
 
 .event:hover {
     background-color: #ff4d4d; /* Change background on hover */
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8); /* Glow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .week-events {
+        grid-template-columns: repeat(7, 1fr) !important; /* Keep seven columns */
+    }
+
+    .day {
+        font-size: 12px; /* Smaller font size for day names */
+    }
+
+    /* Abbreviate day names */
+    .day[data-day="Monday"]:before { content: "Mon"; }
+    .day[data-day="Tuesday"]:before { content: "Tue"; }
+    .day[data-day="Wednesday"]:before { content: "Wed"; }
+    .day[data-day="Thursday"]:before { content: "Thu"; }
+    .day[data-day="Friday"]:before { content: "Fri"; }
+    .day[data-day="Saturday"]:before { content: "Sat"; }
+    .day[data-day="Sunday"]:before { content: "Sun"; }
+}
+/* Event Item Styles */
+.event-item {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    justify-content: flex-start; /* Align items to the top */
+    width: 100%; /* Full width */
+    height: auto; /* Allow height to adjust based on content */
+    overflow: hidden; /* Hide overflow */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Border around each event item */
+    border-radius: 5px; /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for events */
+}
+
+/* Individual image wrapper */
+.event {
+    width: 100%; /* Full width for the event */
+    margin: 0; /* No margin between images */
+    display: flex; /* Use flexbox for the event images */
+    flex-direction: column; /* Stack images vertically */
+}
+
+/* Container for images */
+.event-image {
+    width: 100%; /* Make images responsive */
+    height: 100%; /* Fill the height of the event item */
+    object-fit: cover; /* Ensure the image covers the container */
+    object-position: top; /* Show the top part of the image */
+    border-radius: 4px; /* Rounded corners for images */
+}
+
+/* Styles for single events */
+.event-item.single-event .event-image {
+    height: 100%; /* Full height for single event images */
+}
+
+
+
+/* Hover Effect */
+.image-wrapper:hover .event-image {
+    transform: scale(1.1); /* Scale the image on hover */
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.8); /* Glow effect */
+}
+
+.transparent-background {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the section */
+    margin: 20px 0; /* Space between sections */
+    color: #ffffff; /* Text color for better readability */
 }

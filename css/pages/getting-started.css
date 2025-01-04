@@ -2,32 +2,67 @@
 section {
     padding: 30px; /* Increased padding for a more spacious feel */
     margin: 20px 0; /* Margin between sections */
-    background-color: #2a2a2a; /* Dark background for sections */
+    background-color: rgba(27, 27, 27, 0.9); /* Dark background for sections */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-
-    background-color: #1b1b1b; /* Dark background for the blog section */
-    background-color: rgb(0 0 0 / 0.7);
+    color: #ffffff; /* Default text color for all sections */
 }
 
 /* Heading Styles */
 h2 {
-    font-size: 2em; /* Larger font size for section headings */
+    font-size: 2.5em; /* Larger font size for section headings */
     margin-bottom: 15px; /* Space below headings */
     color: #ff4d4d; /* Highlight color for headings */
     text-align: center; /* Center align headings */
     text-transform: uppercase; /* Uppercase for emphasis */
     letter-spacing: 1px; /* Slightly increased letter spacing */
-    background: -webkit-linear-gradient(orange, red);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 40px;
-    letter-spacing: 5px;
 }
 
-/* Ensure that section headings are distinct from footer headings */
-section h2 {
-    font-size: 2em; /* Keep this for section headings */
+/* Custom List Styles */
+.custom-list {
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Remove padding */
+}
+
+.custom-list li {
+    position: relative; /* Position for custom icons */
+    margin-bottom: 15px; /* Space between list items */
+    color: #ffffff; /* Set text color to white for better readability */
+    padding-left: 50px; /* Space for the icon */
+}
+
+/* List Icon Styles */
+.list-icon {
+    position: absolute; /* Position the icon */
+    left: 0; /* Align to the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    width: 30px; /* Set a fixed width for icons */
+    height: 30px; /* Set a fixed height for icons */
+}
+
+/* Fighter Stats Icon Styles */
+.fighter-icon {
+    width: 45px; /* Set a smaller width for fighter icons */
+    height: 45px; /* Set a smaller height for fighter icons */
+    margin-right: 10px; /* Space between icon and text */
+    vertical-align: middle; /* Align with text */
+    display: inline-block; /* Ensure it behaves like an inline element */
+}
+
+/* Scroll Icon Styles */
+.scroll-icon {
+    width: 30px; /* Set a smaller width for scroll icons */
+    height: 30px; /* Set a smaller height for scroll icons */
+    margin-right: 10px; /* Space between icon and text */
+    vertical-align: middle; /* Align with text */
+    display: inline-block; /* Ensure it behaves like an inline element */
+}
+
+/* Strong Element Styles */
+strong {
+    color: #00b4d8; /* Keep the blue color for strong elements */
+    font-size: 1.2em; /* Adjust the size to make it larger */
 }
 
 /* Paragraph Styles */
@@ -35,45 +70,47 @@ p {
     font-size: 1.3em; /* Slightly larger font size for paragraphs */
     line-height: 1.9; /* Increased line height for readability */
     margin-bottom: 20px; /* Space below paragraphs */
-    text-align: center; /* Justify text for a cleaner look */
-    
-}
-.ul {
-    justify-content: center;
+    text-align: center; /* Center align text */
 }
 
-/* Content List Styles */
-.content-list {
-    margin-left: 0; /* Reset margin for content lists */
-    padding-left: 20px; /* Indent lists */
-    list-style-type: disc; /* Use disc bullets */
-    
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2em; /* Smaller font size for headings on mobile */
+    }
+
+    section {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    .custom-list li {
+        padding-left: 40px; /* Adjust padding for smaller screens */
+    }
+
+    .list-icon, .fighter-icon, .scroll-icon {
+        width: 20px; /* Smaller icon size for mobile */
+        height: 20px; /* Smaller icon size for mobile */
+    }
+
+    p {
+        font-size: 1.1em; /* Smaller font size for paragraphs on mobile */
+    }
 }
 
-/* Footer Styles */
-/*footer {
-    background-color: #2a2a2a;
-    padding: 20px;
-    text-align: center;
-}
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5em; /* Even smaller font size for very small screens */
+    }
 
-footer h2 {
-    margin-bottom: 10px;
-}
+    section {
+        padding: 15px; /* Further reduced padding for very small screens */
+    }
 
-footer p {
-    margin: 5px 0;
-}
+    .custom-list li {
+        padding-left: 30px; /* Further adjust padding for very small screens */
+    }
 
-/* Navbar Styles */
-#navbar {
-    position: fixed; /* Fix the navbar at the top */
-    top: 0; /* Align to the top */
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensure it stays above other content */
-}
-
-strong {
-    color: #00b4d8; /* Change this to your desired color */
-    font-size: 1.2em; /* Adjust the size to make it larger, e.g., 1.2 times the normal font size */
+    p {
+        font-size: 0.9em; /* Smaller font size for paragraphs on very small screens */
+    }
 }
