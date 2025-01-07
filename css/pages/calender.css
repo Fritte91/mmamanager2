@@ -140,3 +140,29 @@
     margin: 20px 0; /* Space between sections */
     color: #ffffff; /* Text color for better readability */
 }
+
+.day-column {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center; /* Center the text */
+}
+
+.day-column h3 {
+    margin: 0; /* Remove default margin for better centering */
+    padding: 10px 0; /* Add some padding for spacing */
+}
+
+.day-column {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center; /* Center the text */
+    border: 1px solid white; /* Add a white border */
+    border-radius: 5px; /* Optional: add rounded corners */
+    padding: 10px; /* Add padding for spacing */
+    background-color: rgba(255, 255, 255, 0.1); /* Optional: add a slight background for contrast */
+}
+
+.day-column h3 {
+    margin: 0; /* Remove default margin for better centering */
+    padding: 10px 0; /* Add some padding for spacing */
+}

@@ -277,3 +277,19 @@
         font-size: 1em; /* Smaller font size for paragraphs on mobile */
     }
 }
+/* Add this to your CSS file */
+.skill-name {
+    color: #00b4d8; /* Skill names in blue */
+}
+
+.max {
+    color: red; /* MAX in red */
+}
+
+.number {
+    color: yellow; /* Numbers in yellow */
+}
+
+.boost {
+    color: green; /* Boost in green */
+}
