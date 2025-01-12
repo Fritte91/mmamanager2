@@ -45,6 +45,15 @@
     overflow: hidden; /* Ensure content doesn't overflow */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
 }
+/* Styles for images */
+.discipline-item img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Limit height to prevent overflow */
+    object-fit: contain; /* Contain the image within the container */
+    border-radius: 5px; /* Match the container's rounded corners */
+}
+
 
 .discipline-item:hover {
     transform: scale(1.05); /* Slightly grow the card */

@@ -7,10 +7,13 @@ function displayTalents() {
     // Common Talents
     talentsData.commonTalents.forEach(talent => {
         commonList.innerHTML += `
-            <div class="talent-item">
-                <img src="${talent.image}" alt="${talent.name}">
-                <div class="talent-description">
-                    <strong class="talent-name" style="color: ${talent.color};">${talent.name}:</strong> ${talent.description}
+            <div class="talent-container">
+                <div class="talent-image">
+                    <img src="${talent.image}" alt="${talent.name}">
+                    <div class="talent-info" style="color: ${talent.color};">
+                        <h4 style="color: ${talent.color};">${talent.name}:</h4>
+                        <p>${talent.description}</p>
+                    </div>
                 </div>
             </div>
         `;
@@ -19,10 +22,13 @@ function displayTalents() {
     // Rare Talents
     talentsData.rareTalents.forEach(talent => {
         rareList.innerHTML += `
-            <div class="talent-item">
-                <img src="${talent.image}" alt="${talent.name}">
-                <div class="talent-description">
-                    <strong class="talent-name" style="color: ${talent.color};">${talent.name}:</strong> ${talent.description}
+            <div class="talent-container">
+                <div class="talent-image">
+                    <img src="${talent.image}" alt="${talent.name}">
+                    <div class="talent-info" style="color: ${talent.color};">
+                        <h4 style="color: ${talent.color};">${talent.name}:</h4>
+                        <p>${talent.description}</p>
+                    </div>
                 </div>
             </div>
         `;
@@ -31,10 +37,13 @@ function displayTalents() {
     // Epic Talents
     talentsData.epicTalents.forEach(talent => {
         epicList.innerHTML += `
-            <div class="talent-item">
-                <img src="${talent.image}" alt="${talent.name}">
-                <div class="talent-description">
-                    <strong class="talent-name" style="color: ${talent.color};">${talent.name}:</strong> ${talent.description}
+            <div class="talent-container">
+                <div class="talent-image">
+                    <img src="${talent.image}" alt="${talent.name}">
+                    <div class="talent-info" style="color: ${talent.color};">
+                        <h4 style="color: ${talent.color};">${talent.name}:</h4>
+                        <p>${talent.description}</p>
+                    </div>
                 </div>
             </div>
         `;

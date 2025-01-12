@@ -1,168 +1,75 @@
 /* Calendar Styles */
-/* #event-calendar {
-    margin: 20px 0; /* Margin around the calendar section */
-  /*  text-align: center; /* Center align text */
-/*}*/
-
 .calendar {
     display: flex; /* Use flexbox for centering */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
     justify-content: center; /* Center items vertically */
     margin: 0 auto; /* Center the calendar */
-    padding: 10px; /* Reduced padding around the calendar */
+    padding: 5px; /* Reduced padding around the calendar */
     border: 2px solid rgba(255, 255, 255, 0.8); /* Border around the calendar */
     border-radius: 10px; /* Rounded corners */
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    max-width: 800px; /* Set a max width for the calendar */
 }
 
 .calendar-header {
     display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center the buttons and title */
+    justify-content: space-between; /* Space between buttons and title */
     align-items: center; /* Align items vertically */
-    margin-bottom: 20px; /* Space below the header */
-}
-
-.calendar-header button {
-    margin: 0 10px; /* Add some space around the buttons */
-}
-
-.calendar-body {
-    display: grid; /* Grid layout for days */
-    grid-template-columns: repeat(7, 1fr); /* 7 columns for days */
-    background-color: #3a3939; /* Darker background for body */
-}
-
-.day {
-    padding: 10px; /* Padding for each day */
-    font-weight: bold; /* Bold text for day names */
-    letter-spacing: 4px;
-    font-size: 20px;
-    color: #ffffff; /* White text */
-    border-bottom: 2px solid #ec0909; /* Bottom border for days */
+    margin-bottom: 10px; /* Space below the header */
 }
 
 .week-events {
-    display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(7, 1fr); /* Seven equal columns */
-    gap: 5px; /* Reduced space between items */
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: space-between; /* Space items evenly */
+}
+
+.header-row {
+    display: flex; /* Use flexbox for header */
+    justify-content: space-between; /* Space out day names */
     width: 100%; /* Full width */
-    max-width: 1200px; /* Optional: set a max width for the grid */
 }
 
-.event {
-    padding: 0; /* Padding for each event */
-    background-color: transparent; /* No background for events */
-    color: #ffffff; /* White text */
-    border: none; /* No border around events */
-    border-radius: 5px; /* Rounded corners for events */
-    margin: 2px; /* Margin between events */
-    transition: background 0.3s; /* Smooth transition for hover */
-}
-
-.event:hover {
-    background-color: #ff4d4d; /* Change background on hover */
-    transform: scale(1.05); /* Slightly increase size */
-    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8); /* Glow effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-}
-
-/* Responsive Styles */
-@media (max-width: 600px) {
-    .week-events {
-        grid-template-columns: repeat(7, 1fr) !important; /* Keep seven columns */
-    }
-
-    .day {
-        font-size: 12px; /* Smaller font size for day names */
-    }
-
-    /* Abbreviate day names */
-    .day[data-day="Monday"]:before { content: "Mon"; }
-    .day[data-day="Tuesday"]:before { content: "Tue"; }
-    .day[data-day="Wednesday"]:before { content: "Wed"; }
-    .day[data-day="Thursday"]:before { content: "Thu"; }
-    .day[data-day="Friday"]:before { content: "Fri"; }
-    .day[data-day="Saturday"]:before { content: "Sat"; }
-    .day[data-day="Sunday"]:before { content: "Sun"; }
-}
-/* Event Item Styles */
 .event-item {
-    display: flex; /* Use flexbox for layout */
+    padding: 5px; /* Reduced padding */
+    display: flex; /* Use flexbox for better alignment */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items */
-    justify-content: flex-start; /* Align items to the top */
-    width: 100%; /* Full width */
-    height: auto; /* Allow height to adjust based on content */
-    overflow: hidden; /* Hide overflow */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-    border: 1px solid rgba(255, 255, 255, 0.5); /* Border around each event item */
+    margin: 0 5px; /* Adjusted margin */
+}
+
+.date-header {
+    font-weight: bold; /* Make the date bold */
+    margin-bottom: 5px; /* Space below the date */
+    color: #ffffff; /* Change text color for visibility */
+}
+
+.event-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the images */
+    margin: 5px 0;
+}
+
+.event-poster {
+    width: 80px; /* Set a fixed width for the posters */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Rounded corners */
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background for events */
 }
 
-/* Individual image wrapper */
-.event {
-    width: 100%; /* Full width for the event */
-    margin: 0; /* No margin between images */
-    display: flex; /* Use flexbox for the event images */
-    flex-direction: column; /* Stack images vertically */
+/* Button Styles */
+button {
+    padding: 5px 10px; /* Smaller padding for buttons */
+    font-size: 14px; /* Smaller font size */
+    background-color: #ff0000; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
-/* Container for images */
-.event-image {
-    width: 100%; /* Make images responsive */
-    height: 100%; /* Fill the height of the event item */
-    object-fit: cover; /* Ensure the image covers the container */
-    object-position: top; /* Show the top part of the image */
-    border-radius: 4px; /* Rounded corners for images */
-}
-
-/* Styles for single events */
-.event-item.single-event .event-image {
-    height: 100%; /* Full height for single event images */
-}
-
-
-
-/* Hover Effect */
-.image-wrapper:hover .event-image {
-    transform: scale(1.1); /* Scale the image on hover */
-    box-shadow: 0 0 15px rgba(255, 204, 0, 0.8); /* Glow effect */
-}
-
-.transparent-background {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding inside the section */
-    margin: 20px 0; /* Space between sections */
-    color: #ffffff; /* Text color for better readability */
-}
-
-.day-column {
-    flex: 1;
-    margin: 0 10px;
-    text-align: center; /* Center the text */
-}
-
-.day-column h3 {
-    margin: 0; /* Remove default margin for better centering */
-    padding: 10px 0; /* Add some padding for spacing */
-}
-
-.day-column {
-    flex: 1;
-    margin: 0 10px;
-    text-align: center; /* Center the text */
-    border: 1px solid white; /* Add a white border */
-    border-radius: 5px; /* Optional: add rounded corners */
-    padding: 10px; /* Add padding for spacing */
-    background-color: rgba(255, 255, 255, 0.1); /* Optional: add a slight background for contrast */
-}
-
-.day-column h3 {
-    margin: 0; /* Remove default margin for better centering */
-    padding: 10px 0; /* Add some padding for spacing */
+button:hover {
+    background-color: #cc0000; /* Darker shade on hover */
 }

@@ -109,3 +109,47 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
     background-color: rgb(0 0 0 / 0.7);
 }
+
+.talent-container {
+    position: relative; /* Positioning for absolute children */
+    display: inline-block; /* Allow items to sit next to each other */
+    margin: 10px; /* Space between items */
+}
+
+.talent-image {
+    position: relative; /* Positioning for the info box */
+}
+
+.talent-image img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.talent-info {
+    position: absolute; /* Position it next to the image */
+    top: 0; /* Align to the top */
+    left: 110%; /* Position it to the right of the image */
+    width: 220px; /* Set a width for the info box */
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background with lower opacity */
+    color: white; /* Text color */
+    padding: 10px; /* Padding inside the info box */
+    border-radius: 5px; /* Rounded corners */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.talent-container:hover .talent-info {
+    opacity: 1; /* Show info on hover */
+}
+
+.talent-info h4 {
+    margin: 0; /* Remove default margin */
+    font-weight: bold; /* Make the name bold */
+}
+
+.talent-info p {
+    margin: 5px 0 0; /* Add some margin for spacing */
+    color: white; /* Default color for description */
+}
