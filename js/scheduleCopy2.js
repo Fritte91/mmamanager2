@@ -64,7 +64,7 @@ const events = [
         duration: 1,
         cycleLength: 28,
         specificDays: [27],
-        image: "./images/disciplineevent.jpg"
+        image: "./images/disciplineevent1.jpg"
     },
     {
         name: "Team Tournament Event",

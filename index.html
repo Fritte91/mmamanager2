@@ -41,13 +41,22 @@
     <section id="popular-tools" class="transparent-background">
     <div id="event-calendar">
         <h2>Event Calendar</h2>
+        <h2>Not accurate today, still working on all functions to be perfect.</h2>
         <div class="calendar">
             <div class="calendar-header">
                 <button id="prev-week" onclick="changeWeek(-1)">&#9664;</button>
-                <div id="week-display">2025-01-06 - 2025-01-12</div>
+                <div id="week-display">Week of 2025-01-06</div>
                 <button id="next-week" onclick="changeWeek(1)">&#9654;</button>
             </div>
-            
+            <div class="day-names">
+                <div class="day-name">Mon</div>
+                <div class="day-name">Tue</div>
+                <div class="day-name">Wed</div>
+                <div class="day-name">Thu</div>
+                <div class="day-name">Fri</div>
+                <div class="day-name">Sat</div>
+                <div class="day-name">Sun</div>
+            </div>
             <div class="week-events" id="week-events">
                 <!-- Event items will be dynamically generated here -->
             </div>
@@ -58,6 +67,57 @@
     <!-- Blog Post Section -->
     <section id="blog-posts">
         <h2>Latest Updates</h2>
+
+        <article class="post">
+            <h3><i class="fa-solid fa-play"></i>   January Balance Adjustments</h3>
+            <p><strong>Date:</strong> January, 2025</p>
+            <p>Hello Managers,<br>Here comes the balance adjusments!</p>
+            <p>With these changes come some tweaks to the phrasing of some description in order to unify and clarify them.</p>
+            
+            <div class="expandable-content" style="display: none;">
+                <h4>GENERIC CHANGES</h4>
+                <p>Punches on the ground stance are now slightly stronger (more damage and less intiative penalty upon missing)</p>
+                <h4>TALENTS ADJUSTMENTS:</h4>
+                <ul>
+                    <li>Body Proportions: High kicks and elbows critical damage : 35% > 45%</li>
+                    <li>Flawless Defense: Maximum kick and knee defense increase: 40% > 50%</li>
+                    <li>It's Personal: Maximum damage increase: 50% > 60%</li>
+                    <li>Surprising Angles: Critical hit chance per stack: 15% > 20%; Maximum stacks: 4 > 3</li>
+                </ul>
+                <h4>TALENT CHANGES:</h4>
+                <ul>
+                    <li>Savage: Critical punches decrease 5% of the opponent's strike defence. Can be stacked up to 5 times.</li>
+                    <li>Hard Guard: Increase damage mitigation proportionally to missing health, up to 40%.</li>
+                    <li>Last Breath: After the opponent successfully stands up, increase initiative by 2% and damage mitigation by 15%. Can be stacked up to 3 times.</li>
+                </ul>
+                <p>Over the course of 2025, more of the least exciting talents will get similar changes.</p>
+            </div>
+            <button class="read-more">Read More</button>
+        </article>
+
+
+        <article class="post">
+            <h3><i class="fa-solid fa-play"></i>   Season 32 Champions</h3>
+            <p><strong>Date:</strong> January, 2025</p>
+            <p>We have new Champions for the 32th season, Congratulations to the new belt and title!</p>
+            
+            <div class="expandable-content" style="display: none;">
+                <img class="blog-post-img" src="./images/champion32.jpg">
+            </div>
+            <button class="read-more">Read More</button>
+        </article>
+
+        <article class="post">
+            <h3><i class="fa-solid fa-play"></i>   Season 31 Champions</h3>
+            <p><strong>Date:</strong> January, 2025</p>
+            <p>We have new Champions for the 31th season, Congratulations to the new belt and title!</p>
+            
+            <div class="expandable-content" style="display: none;">
+                <img class="blog-post-img" src="./images/champion31.jpg">
+            </div>
+            <button class="read-more">Read More</button>
+        </article>
+
 
         <article class="post">
             <h3><i class="fa-solid fa-play"></i>   December 30th Balance Adjustments</h3>

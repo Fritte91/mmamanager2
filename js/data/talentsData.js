@@ -9,7 +9,7 @@ const talentsData = {
         // Add more common talents here
         {
             name: "Body Proportions",
-            description: "Increase Critical Hit Damage For High Kicks And Elbow Strikes By 35%",
+            description: "Increase Critical Hit Damage For High Kicks And Elbow Strikes By 45%",
             image: "../images/common-2.jpg",
             color: "#808080" // Gray color for Common Talents
         },
@@ -121,7 +121,7 @@ const talentsData = {
         // Add more common talents here
         {
             name: "Savage",
-            description: "Increase Critical Hit Damage For Standing Attacks By 20% (Not In Clinch)",
+            description: "Critical Punches decrese 5% of the opponent's strike defense. Can be stacked up to 5 times.",
             image: "../images/common-12.jpg",
             color: "#808080" // Gray color for Common Talents
         },
@@ -215,7 +215,7 @@ const talentsData = {
         // Add more rare talents here
         {
             name: "Flawless Defense",
-            description: "Increase Kick Defense And Knee Defense Proportionally To Missing Health, up to 40%.",
+            description: "Increase Kick Defense And Knee Defense Proportionally To Missing Health, up to 50%.",
             image: "../images/rare-21.jpg",
             color: "#007BFF" // Blue color for Rare Talents
         },
@@ -264,7 +264,7 @@ const talentsData = {
         // Add more rare talents here
         {
             name: "Last Breath",
-            description: "After The Opponent Successfully Stands Up, Increase Damage Mitigation By 50% For 12 Seconds.",
+            description: "After the opponent successfully stands up. Increase initiative by 2% and damage mitigation by 15%. Can be stacked up to 3 times.",
             image: "../images/rare-14.jpg",
             color: "#007BFF" // Blue color for Rare Talents
         },
@@ -327,7 +327,7 @@ const talentsData = {
         // Add more rare talents here
         {
             name: "Suprising Angles",
-            description: "After The Fighter Misses An Attack, Increase Critical Hit Chances By 15%. Can Be Stacked Up To 4 Times.",
+            description: "After The Fighter Misses An Attack, Increase Critical Hit Chances By 20%. Can Be Stacked Up To 3 Times.",
             image: "../images/rare-7.jpg",
             color: "#007BFF" // Blue color for Rare Talents
         },
@@ -394,7 +394,7 @@ const talentsData = {
         // Add more epic talents here
         {
             name: "Hard Guard",
-            description: "Increase Damage Mitigation By 15%.",
+            description: "Increase damage mitigation proportionally to missing health, up to 40%.",
             image: "../images/epic-8.jpg",
             color: "#6F42C1" // Purple color for Epic Talents
         },
@@ -408,7 +408,7 @@ const talentsData = {
         // Add more epic talents here
         {
             name: "It's Personal",
-            description: "Increase Damage For All Attack Moves Proportionally To Missing Health, Up To 50%.",
+            description: "Increase Damage For All Attack Moves Proportionally To Missing Health, Up To 60%.",
             image: "../images/epic-3.jpg",
             color: "#6F42C1" // Purple color for Epic Talents
         },
